@@ -3,7 +3,8 @@ import { API_URL } from "../app/(home)/page";
 const getVideos = async (id: number) => {
   const res = await fetch(`${API_URL}/${id}/videos`);
   const json = await res.json();
-  throw new Error("error");
+  // throw new Error("error");
+  return json;
 };
 
 export default async function MovieVideos({ id }: { id: number }) {
